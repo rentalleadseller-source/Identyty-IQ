@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Online Background Check</title>
+<title>Credit Score & Credit Report</title>
 
 <style>
 *{
@@ -15,179 +15,152 @@
 }
 
 body{
-    background:#f1f5f9;
+    background:#f6f8fb;
     color:#172033;
 }
 
 .container{
-    max-width:500px;
+    max-width:480px;
     margin:auto;
-    padding:20px;
+    padding:18px;
 }
 
-/* HEADER */
+/* HERO */
 
-.header{
+.hero{
     text-align:center;
-    padding:25px 10px 15px;
+    padding:30px 10px 20px;
 }
 
-.icon{
-    width:58px;
-    height:58px;
-    margin:0 auto 15px;
-    background:#e0f2fe;
-    color:#0284c7;
-    border-radius:16px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:28px;
-}
-
-.header h1{
-    font-size:29px;
+.hero h1{
+    font-size:30px;
     line-height:1.2;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
-.header p{
+.hero p{
     color:#64748b;
     font-size:16px;
     line-height:1.5;
 }
 
-/* VERIFICATION PANEL */
+/* MAIN CARD */
 
-.panel{
-    background:#ffffff;
-    border:1px solid #e2e8f0;
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    margin-top:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.badge{
+    display:inline-block;
+    background:#eff6ff;
+    color:#2563eb;
+    padding:7px 12px;
     border-radius:20px;
-    padding:24px;
-    margin-top:18px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:18px;
 }
 
-.panel-top{
+.card h2{
+    font-size:22px;
+    margin-bottom:18px;
+}
+
+/* BENEFITS */
+
+.features{
+    list-style:none;
+}
+
+.features li{
     display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:22px;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:17px;
+    font-size:15px;
+    line-height:1.4;
 }
 
-.panel-title{
-    font-size:19px;
-    font-weight:bold;
-}
-
-.status{
-    font-size:12px;
-    font-weight:bold;
-    color:#15803d;
+.check{
+    min-width:22px;
+    height:22px;
     background:#dcfce7;
-    padding:6px 9px;
-    border-radius:20px;
-}
-
-/* CHECK ITEMS */
-
-.check-item{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    padding:15px 0;
-    border-bottom:1px solid #eef2f7;
-}
-
-.check-item:last-child{
-    border-bottom:0;
-}
-
-.check-icon{
-    width:40px;
-    height:40px;
-    border-radius:12px;
-    background:#f8fafc;
+    color:#16a34a;
+    border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:19px;
-}
-
-.check-text{
-    flex:1;
-}
-
-.check-text strong{
-    display:block;
-    font-size:15px;
-    margin-bottom:3px;
-}
-
-.check-text span{
-    color:#64748b;
     font-size:13px;
+    font-weight:bold;
+}
+
+.feature-text strong{
+    display:block;
+    margin-bottom:2px;
 }
 
 /* CTA */
 
-.cta{
-    margin-top:22px;
-}
-
 .button{
     display:block;
     width:100%;
-    background:#0f766e;
+    margin-top:24px;
+    background:#2563eb;
     color:#fff;
     text-decoration:none;
     text-align:center;
     padding:16px;
     border-radius:12px;
-    font-size:17px;
     font-weight:bold;
+    font-size:17px;
 }
 
 .button:hover{
-    background:#115e59;
+    background:#1d4ed8;
 }
 
-.note{
+/* TRUST */
+
+.trust{
     text-align:center;
-    color:#64748b;
-    font-size:12px;
-    margin-top:12px;
-    line-height:1.5;
-}
-
-/* INFO */
-
-.info{
-    margin-top:25px;
-}
-
-.info h2{
-    font-size:20px;
-    margin-bottom:12px;
-}
-
-.info-box{
-    background:#fff;
-    border-radius:14px;
-    padding:17px;
-    margin-bottom:10px;
-    border:1px solid #e2e8f0;
-}
-
-.info-box strong{
-    display:block;
-    font-size:14px;
-    margin-bottom:5px;
-}
-
-.info-box p{
+    margin-top:18px;
     color:#64748b;
     font-size:13px;
+}
+
+.trust span{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+/* FAQ */
+
+.faq{
+    margin-top:28px;
+}
+
+.faq h2{
+    font-size:20px;
+    margin-bottom:14px;
+}
+
+.question{
+    background:#fff;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:10px;
+    font-size:14px;
     line-height:1.5;
+    box-shadow:0 3px 12px rgba(0,0,0,.04);
+}
+
+.question strong{
+    display:block;
+    margin-bottom:4px;
 }
 
 /* FOOTER */
@@ -197,23 +170,18 @@ body{
     color:#94a3b8;
     font-size:11px;
     line-height:1.5;
-    padding:30px 10px 20px;
+    padding:30px 10px;
 }
 
 /* MOBILE */
 
 @media(max-width:380px){
-
-    .container{
-        padding:15px;
+    .hero h1{
+        font-size:27px;
     }
 
-    .header h1{
-        font-size:26px;
-    }
-
-    .panel{
-        padding:20px;
+    .card{
+        padding:21px;
     }
 }
 </style>
@@ -223,136 +191,76 @@ body{
 
 <div class="container">
 
-<header class="header">
+<section class="hero">
 
-    <h1>Complete Your Background Check</h1>
+    <h1>Check Your Credit Score & Report</h1>
 
-</header>
-
-
-<section class="panel">
-
-    <div class="panel-top">
-
-        <div class="panel-title">
-            Report Overview
-        </div>
-
-        <div class="status">
-            Secure
-        </div>
-
-    </div>
-
-
-    <div class="check-item">
-
-        <div class="check-icon">
-            👤
-        </div>
-
-        <div class="check-text">
-            <strong>Identity Verification</strong>
-            <span>Confirm your personal information.</span>
-        </div>
-
-    </div>
-
-
-    <div class="check-item">
-
-        <div class="check-icon">
-            📄
-        </div>
-
-        <div class="check-text">
-            <strong>Background Information</strong>
-            <span>Review information available through the screening process.</span>
-        </div>
-
-    </div>
-
-
-    <div class="check-item">
-
-        <div class="check-icon">
-            💳
-        </div>
-
-        <div class="check-text">
-            <strong>Credit Information</strong>
-            <span>Access available credit-related information.</span>
-        </div>
-
-    </div>
-
-
-    <div class="check-item">
-
-        <div class="check-icon">
-            🔒
-        </div>
-
-        <div class="check-text">
-            <strong>Secure Online Process</strong>
-            <span>Complete the process through the secure offer page.</span>
-        </div>
-
-    </div>
-
-
-    <div class="cta">
-
-        <a class="button"
-           href="https://afflat3d2.com/trk/lnk/D0396876-9454-43DF-BAE8-3F5A83EE2394/?o=32670&c=918277&a=744887&k=2AC54FFC9114D2AAAC0B77326102E5E6&l=38512&s1=SP_Arina">
-            Start Background Check
-        </a>
-
-        <div class="note">
-            Follow the instructions on the next page to complete your check.
-        </div>
-
-    </div>
+    <p>
+        Review your credit information online through a secure credit check.
+    </p>
 
 </section>
 
 
-<section class="info">
+<div class="card">
 
-    <h2>How It Works</h2>
-
-    <div class="info-box">
-        <strong>1. Start the process</strong>
-        <p>
-            Select the button above to continue to the screening offer.
-        </p>
+    <div class="badge">
+        Credit Check
     </div>
 
+    <h2>What You Can Access</h2>
 
-    <div class="info-box">
-        <strong>2. Provide your information</strong>
-        <p>
-            Follow the provider's instructions to complete the required information.
-        </p>
+    <ul class="features">
+
+        <li>
+            <span class="check">✓</span>
+
+            <div class="feature-text">
+                <strong>3-Bureau Credit Report</strong>
+                Review your credit information from three major credit bureaus.
+            </div>
+        </li>
+
+
+        <li>
+            <span class="check">✓</span>
+
+            <div class="feature-text">
+                <strong>Credit Score</strong>
+                Access your available credit score information.
+            </div>
+        </li>
+
+
+        <li>
+            <span class="check">✓</span>
+
+            <div class="feature-text">
+                <strong>Credit Report Details</strong>
+                Review important information included in your credit profile.
+            </div>
+        </li>
+
+    </ul>
+
+
+    <a class="button"
+       href="https://afflat3a2.com/trk/lnk/6AC7477F-EDF1-4A43-81E9-1B23EDD2B5D8/?o=32670&c=918277&a=767221&k=F746B270F05A0501AAA235CB8E938907&l=38512&s1=AP_Peter">
+        Check My Credit Score
+    </a>
+
+    <div class="trust">
+        ✓ Secure online process &nbsp; • &nbsp; <span>Trusted by millions*</span>
     </div>
 
-
-    <div class="info-box">
-        <strong>3. Review your results</strong>
-        <p>
-            Access the information made available through the screening service.
-        </p>
-    </div>
-
-</section>
+</div>
 
 
-<footer class="footer">
-    © 2026 Background Check Services
-</footer>
+<div class="footer">
+    © 2026 Credit Check Services<br>
+</div>
 
 </div>
 
 </body>
 </html>
-```
